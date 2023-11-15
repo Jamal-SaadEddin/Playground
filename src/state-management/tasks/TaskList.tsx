@@ -1,5 +1,8 @@
-import useAuth from "./hooks/useAuth";
-import useTasks from "./hooks/useTasks";
+import { useContext } from "react";
+import useAuth from "../hooks/useAuth";
+import TasksContext from "./tasksContext";
+
+export const useTasks = () => useContext(TasksContext);
 
 const TaskList = () => {
   const { tasks, dispatch } = useTasks();
